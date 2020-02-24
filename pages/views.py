@@ -2,8 +2,6 @@ from django.shortcuts import render
 
 from .models import About, Work, Experts
 
-
-
 # Create your views here.
 def index(request):
 
