@@ -1,0 +1,34 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Custom styling -->
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+    integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+
+    <title>ProWind</title>
+</head>
+<body>
+    
+    <a id="topbtn" class="go-top-btn" href="#"><i class="fas fa-arrow-up"></i></a>
+
+    <!-- Main Content -->
+    {% block content %}
+
+    {% endblock %}
+
+   
+    <!-- Links -->
+    {% include 'partials/_links.html' %}
+    <!-- Footer -->
+    {% include 'partials/_footer.html' %}
+    <!-- js -->
+    <script src="{% static 'js/script.js' %}"></script>
+
+</body>
+</html>

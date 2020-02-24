@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+    <!--Header-->
+    <!--Nav-->
+    {% include 'partials/_nav.html' %}
+
+    <!--Job Listings-->
+
+    <section id="vacancy" class="listings">
+        <div class="container">
+            <div class="job-description">
+                <h3>Project Manager</h3>
+                <p>Location: </p>
+                <p>We are looking for:</p>
+                <p>
+                    A Project Manager who can manage large scale industrial projects. 
+                    You will have a broad range of project-related responsibilities and duties. 
+                    You will also lead project organization successfully and act as the first point of contact for the customer. 
+                    Are you the one we are looking for as a Project Manager?
+                </p>
+                <p>As a Project Manager, you will:</p>
+                <ul>
+                    <li>Have total responsibility / ownership of industrial construction project delivery</li>
+                    <li>Act as the Creation, development and defining of project plan including budget, work division, 
+                        schedule, logistics plan, resourcing, tendering/contracts and other project managerial activities
+                    </li>
+                    <li>Monitor, control and report quality, delivery time, cost and scope in the projects</li>
+                    <li>Maintain and improve the customer relationship</li>
+                </ul>
+                <p>Your education and language skills:</p>
+                <ul>
+                    <li>An appropriate technical degree (B.Sc. or M.Sc.) in relevant area</li>
+                    <li>Fluent written and spoken English</li>
+                </ul>
+                <p>To succeed, you have:</p>
+                <ul>
+                    <li>Experience in managerial position in large energy, solar, wind or other simiral construction projects (+7 years preferred)</li>
+                    <li>Excellent communication and cooperation skills</li>
+                    <li>Problem solving skills and systematic ways of working</li>
+                    <li>Ability to work under pressure</li>
+                    <li>Capability to understand the big picture and identify key things for success</li>
+                    <li>Forward thinking and goal focused mindset</li>
+                    <li>Readiness to travel as required</li>
+                </ul>
+                <p>What we provide:</p>
+                <ul>
+                    <li>Opportunities for continuous learning of state-of-the-art technology and career development</li>
+                    <li>Competitive remuneration package directly dependent on the candidate's qualifications and experience</li>
+                    <li>Group private medical insurance</li>
+                    <li>Company restaurant</li>
+                    <li>Personal smartphone and laptop</li>
+                </ul>
+                <a class="btn-listing-form" href="form.html">Fill in form</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Follow -->
+    {% include 'partials/_follow.html' %}
+
+{% endblock %}

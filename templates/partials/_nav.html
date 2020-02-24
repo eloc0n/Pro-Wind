@@ -1,0 +1,69 @@
+{% load static %}
+
+<!--Header-->
+<header 
+    {% if '/' == request.path %}
+        id="home-showcase"
+    {% elif 'vacancies' or 'vacancy' in request.path %}
+        id="listing-showcase"
+    {% endif %}
+    >
+    <button class="nav-toggle" aria-label="toggle navigation">
+        <span class="hamburger"></span>
+    </button>
+    
+    <div class="container">
+        
+        <!--Nav-->
+
+        <nav class="main-nav">
+            <a href="{% url 'index' %}">
+                <img 
+                    {% if 'form' == request.path %}
+                        src="{% static 'img/logo-dark.png' %}"
+                    {% else %}
+                        src="{% static 'img/logo.png' %}"
+                    {% endif %}
+                    alt="ProWind" class="logo"
+                >
+            </a>
+            <ul class="main-menu">
+                <li><a class="nav__link" href="{% url 'index' %}#home-showcase">Home</a></li>
+                <li><a class="nav__link" href="{% url 'index' %}#about">About</a></li>
+                <li><a class="nav__link" href="{% url 'index' %}#work">Our Work</a></li>
+                <li>
+                    <a class="nav__link" href="{% url 'vacancies' %}">Vacancies</a>
+                </li>
+            </ul>
+            <ul class="right-menu">
+                <li>
+                    <a href="#">Register</a>
+                    <i class="fas fa-user-plus"></i>
+                </li>
+                <li>
+                    <a href="#">Login</a>
+                    <i class="fas fa-sign-in-alt"></i>
+                </li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            
+            {% if '/' == request.path %}
+                <h1>Empowering Projects</h1>
+                <p>Our goal is to make future greener by 
+                    utilizing wind power to provide electric energy to you.
+                </p>
+            {% elif 'vacancies' in request.path%}
+                <h1>Empowering Projects</h1>
+            {% else %}
+                <h1>{{ listing.name }}listing.name</h1>
+                <p>{{ listing.position }}listing.position</p>
+            {% endif %}
+        </div>
+        {% if 'vacancies' in request.path %}
+            <a class="btn-listings" href="#vacancies">Job Listings</a>
+        {% elif 'vacancy' in request.path %}
+            <a class="btn-listings" href="#vacancy">Apply</a>
+        {% endif %}
+    </div>
+</header>

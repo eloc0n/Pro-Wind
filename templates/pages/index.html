@@ -1,0 +1,284 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+
+   
+{% block content %}  
+    <!--Header-->
+    <!--Nav-->
+    {% include 'partials/_nav.html' %}
+
+
+    <!--About-->
+    <section id="about" class="about-us">
+        <div class="container">
+            <div class="about">
+                <div class="card">
+                    <div class="card__image-container">
+                        <img class="card__image" src="{{ abouts.photo.url }}" alt="">
+                    </div>
+                    
+                    <svg class="card__svg" viewBox="0 0 800 500">
+                
+                        <path d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 
+                        250 550 150 650 300 Q 750 450 800 400 L 800 500 L 0 500" 
+                        stroke="transparent" fill="#333"/>
+                        <path class="card__line" d="M 0 100 Q 50 200 100 250 Q 250 
+                        400 350 300 C 400 250 550 150 650 300 Q 750 450 800 400"
+                        stroke="pink" stroke-width="3" fill="transparent"/>
+                    </svg>
+                    
+                    <div class="card__content">
+                        <h1 class="card__title">Site Audit</h1>
+                        <p>We are on a mission to enable our people to shine in the world of projects. 
+                            Our vision is to be the most trusted and wanted project partner by staying 
+                            agile and to have the most empowered personnel to outperform the competition.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__image-container">
+                        <img class="card__image" src="img/About images/about2.jpg" alt="">
+                    </div>
+                    
+                    <svg class="card__svg" viewBox="0 0 800 500">
+                
+                        <path d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 
+                        250 550 150 650 300 Q 750 450 800 400 L 800 500 L 0 500" 
+                        stroke="transparent" fill="#333"/>
+                        <path class="card__line" d="M 0 100 Q 50 200 100 250 Q 250 
+                        400 350 300 C 400 250 550 150 650 300 Q 750 450 800 400"
+                        stroke="pink" stroke-width="3" fill="transparent"/>
+                    </svg>
+                    
+                    <div class="card__content">
+                        <h1 class="card__title">Project Development</h1>
+                        <p>We are project partner for industrial investors, project contractors and technology providers 
+                            who need the best services and doers to complete their projects successfully.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__image-container">
+                        <img class="card__image" src="img/About images/about3.jpg" alt="">
+                    </div>
+                    
+                    <svg class="card__svg" viewBox="0 0 800 500">
+                
+                        <path d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 
+                        250 550 150 650 300 Q 750 450 800 400 L 800 500 L 0 500" 
+                        stroke="transparent" fill="#333"/>
+                        <path class="card__line" d="M 0 100 Q 50 200 100 250 Q 250 
+                        400 350 300 C 400 250 550 150 650 300 Q 750 450 800 400"
+                        stroke="pink" stroke-width="3" fill="transparent"/>
+                    </svg>
+                    
+                    <div class="card__content">
+                        <h1 class="card__title">Procurment and Logistics</h1>
+                        <p>We provide project management, control, information and construction management services.  
+                            As our customer you will always have the right expertise available. </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__image-container">
+                        <img class="card__image" src="img/About images/about4.jpg" alt="">
+                    </div>
+                    
+                    <svg class="card__svg" viewBox="0 0 800 500">
+                
+                        <path d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 
+                        250 550 150 650 300 Q 750 450 800 400 L 800 500 L 0 500" 
+                        stroke="transparent" fill="#333"/>
+                        <path class="card__line" d="M 0 100 Q 50 200 100 250 Q 250 
+                        400 350 300 C 400 250 550 150 650 300 Q 750 450 800 400"
+                        stroke="pink" stroke-width="3" fill="transparent"/>
+                    </svg>
+                    
+                    <div class="card__content">
+                        <h1 class="card__title">Project Management and Control</h1>
+                        <p> 
+                         Project Management and Control services empowers organizations to complete their projects in time, in budget 
+                         and according to the quality criteria. </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__image-container">
+                        <img class="card__image" src="img/About images/about5.jpg" alt="">
+                    </div>
+                    
+                    <svg class="card__svg" viewBox="0 0 800 500">
+                
+                        <path d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 
+                        250 550 150 650 300 Q 750 450 800 400 L 800 500 L 0 500" 
+                        stroke="transparent" fill="#333"/>
+                        <path class="card__line" d="M 0 100 Q 50 200 100 250 Q 250 
+                        400 350 300 C 400 250 550 150 650 300 Q 750 450 800 400"
+                        stroke="pink" stroke-width="3" fill="transparent"/>
+                    </svg>
+                    
+                    <div class="card__content">
+                        <h1 class="card__title">Contruction Management</h1>
+                        <p>We are experienced in all major technical disciplines for your needs; Electrical, Automation, Mechanical, Civil, HSEQ works and more. 
+                            Our project portfolio consists of more than 650 success stories from more than 105 countries around the world. </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__image-container">
+                        <img class="card__image" src="img/About images/about6.jpg" alt="">
+                    </div>
+                    
+                    <svg class="card__svg" viewBox="0 0 800 500">
+                
+                        <path d="M 0 100 Q 50 200 100 250 Q 250 400 350 300 C 400 
+                        250 550 150 650 300 Q 750 450 800 400 L 800 500 L 0 500" 
+                        stroke="transparent" fill="#333"/>
+                        <path class="card__line" d="M 0 100 Q 50 200 100 250 Q 250 
+                        400 350 300 C 400 250 550 150 650 300 Q 750 450 800 400"
+                        stroke="pink" stroke-width="3" fill="transparent"/>
+                    </svg>
+                    
+                    <div class="card__content">
+                        <h1 class="card__title">Project Information Management</h1>
+                        <p>
+                            Our services cover the full lifecycle of project from maintenance stage. 
+                            We take care of project information planning and control, supplier document control, 
+                            compiling and delivery of the final documentation. </p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!--Our work-->
+
+    <section id="work" class="our-work">
+        <div class="container">
+            <div class="work">
+                <div class="card-work">
+                    <img src="img/Our work images/work1.jpg" alt="">
+                    
+                    <div class="card-work-content">
+                        <h4>First Wind Turbine Field in the Mediterranean sea</h4>
+                        <p>Site management and installation contract (total 240 hours)</p>
+                        <p>All site operations performed by Pro Wind</p>
+                    </div>
+                </div> 
+                <div class="card-work">
+                    <img src="img/Our work images/work2.jpg" alt="">
+                    
+                    <div class="card-work-content">
+                        <h4>Nevada Texas, overhaul and extension</h4>
+                        <p>Project consulting and resourcing contract</p>
+                        <p>Mechanical and Electrical supervision</p>
+                        <p>HSE and QA/QC</p>
+                    </div>
+                </div>    
+                <div class="card-work">
+                    <img src="img/Our work images/work3.jpg" alt="">
+                    
+                    <div class="card-work-content">
+                        <h4>Netherlands, extension project</h4>
+                        <p>Full electrification and automatation system contracting</p>
+                        <p>Commissioning of electrification</p>
+                    </div>
+                </div>       
+            </div>
+        </div>
+    </section>
+
+    <!--Experts-->
+
+    <section class="experts">
+        <div class="container">
+            <div class="experts-grid">
+                <div class="card-experts">
+                    <div>
+                        <img class="profile-img" src="img/Experts images/expert1.jpg" alt="">
+                        <ul class="social-list">
+                            <li class="social-item">
+                                <a aria-label="facebook" class="social-link" href="https://facebook.com" target="_blank">
+                                    <i class="fab fa-facebook-square"></i>
+                                </a>
+                            </li>
+                            <li class="social-item">
+                                <a aria-label="twitter" class="social-link" href="https://twitter.com" target="_blank">
+                                    <i class="fab fa-twitter-square"></i>
+                                </a>
+                            </li>
+                            <li class="social-item">
+                                <a aria-label="linkedin" class="social-link" href="https://linkedin.com" target="_blank">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h2 class="profile-name">Ramsey Harper</h2>
+                        <p class="profile-position">Senior Project Coordinator</p>
+                    </div>
+                </div>
+
+                <div class="card-experts">
+                    <div>
+                        <img class="profile-img" src="img/Experts images/expert2.jpg" alt="">
+                        <ul class="social-list">
+                            <li class="social-item">
+                                <a aria-label="facebook" class="social-link" href="https://facebook.com" target="_blank">
+                                    <i class="fab fa-facebook-square"></i>
+                                </a>
+                            </li>
+                            <li class="social-item">
+                                <a aria-label="twitter" class="social-link" href="https://twitter.com" target="_blank">
+                                    <i class="fab fa-twitter-square"></i>
+                                </a>
+                            </li>
+                            <li class="social-item">
+                                <a aria-label="linkedin" class="social-link" href="https://linkedin.com" target="_blank">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h2 class="profile-name">John Doe</h2>
+                        <p class="profile-position">CEO</p>
+                    </div>
+                </div>
+
+                <div class="card-experts">
+                    <div>
+                        <img class="profile-img" src="img/Experts images/expert3.jpg" alt="">
+                        <ul class="social-list">
+                            <li class="social-item">
+                                <a aria-label="facebook" class="social-link" href="https://facebook.com" target="_blank" >
+                                    <i class="fab fa-facebook-square"></i>
+                                </a>
+                            </li>
+                            <li class="social-item">
+                                <a aria-label="twitter" class="social-link" href="https://twitter.com" target="_blank">
+                                    <i class="fab fa-twitter-square"></i>
+                                </a>
+                            </li>
+                            <li class="social-item">
+                                <a aria-label="linkedin" class="social-link" href="https://linkedin.com" target="_blank">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h2 class="profile-name">Sesilia Alhainen</h2>
+                        <p class="profile-position">Sales Director, Key Accounts</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- Follow -->
+     {% include 'partials/_follow.html' %}
+
+{% endblock %}
