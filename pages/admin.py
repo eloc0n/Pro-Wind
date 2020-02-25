@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import About, Work, Experts
+from .models import About, Work, Expert
 # from tinymce.widgets import TinyMCE
 # from django.db import models
 
@@ -11,4 +11,4 @@ from .models import About, Work, Experts
 
 admin.site.register(Work)
 admin.site.register(About)
-admin.site.register(Experts)
+admin.site.register(Expert)

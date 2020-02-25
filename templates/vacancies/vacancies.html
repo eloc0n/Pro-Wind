@@ -14,72 +14,24 @@
     <section id="vacancies" class="listings">
         <div class="container">
             <div class="listings-grid">
-                <div class="card-listings">
-                    <a href="{% url 'vacancy' %}">
-                        <div>
-                            <img class="listing-img" src="img/Position images/project-manager.jpg" alt="">
-                        </div>
+                {% if listings %}
+                    {% for vacancy in listings %}
+                        <div class="card-listings">
+                            <a href="{% url 'vacancy' vacancy.id %}">
+                                <div>
+                                    <img class="listing-img" src="{{ vacancy.photo.url }}" alt="">
+                                </div>
 
-                        <div class="listing-main">
-                            <h2 class="listing-name">Project Manager</h2>
-                            <p class="listing-position">Project Management - Helsinki</p>
+                                <div class="listing-main">
+                                    <h2 class="listing-name">{{ vacancy.title }}</h2>
+                                    <p class="listing-position">{{ vacancy.position}} - {{ vacancy.country }}, {{ vacancy.city }}</p>
+                                </div>
+                            </a>
                         </div>
-                    </a>
-                </div>
-
-                <div class="card-listings">
-                    <a href="listing.html">
-                        <div>
-                            <img class="listing-img" src="img/Position images/planning-engineers.jpg" alt="">
-                        </div>
-
-                        <div class="listing-main">
-                            <h2 class="listing-name">Planning and Scheduling Engineers</h2>
-                            <p class="listing-position">Project Management - Other Location</p>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="card-listings">
-                    <a href="listing.html">
-                        <div>
-                            <img class="listing-img" src="img/Position images/site-manager.jpg" alt="">
-                        </div>
-
-                        <div class="listing-main">
-                            <h2 class="listing-name">Site Manager</h2>
-                            <p class="listing-position">Site Management - Other Location</p>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="card-listings">
-                    <a href="listing.html">
-                        <div>
-                            <img class="listing-img" src="img/Position images/electrical-supervisor.jpg" alt="">
-                        </div>
-
-                        <div class="listing-main">
-                            <h2 class="listing-name">Electrical Supervisor</h2>
-                            <p class="listing-position">Electrical Engineering - Other Location</p>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="card-listings">
-                    <a href="listing.html">
-                        <div>
-                            <img class="listing-img" src="img/Position images/logistics.jpg" alt="">
-                        </div>
-
-                        <div class="listing-main">
-                            <h2 class="listing-name">Logistics / Scheduling / Site Engineer</h2>
-                            <p class="listing-position">Engineering - Other Location</p>
-                        </div>
-                    </a>
-                </div>
-
-                
+                    {% endfor %}
+                {% else %}
+                    <p>No Open Vacancies available at the moment.</p>           
+                {% endif %}
             </div>
         </div>
     </section>

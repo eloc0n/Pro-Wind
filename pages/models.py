@@ -17,7 +17,7 @@ class Work(models.Model):
     def __str__(self):
         return self.title
 
-class Experts(models.Model):
+class Expert(models.Model):
     photo = models.ImageField(upload_to='photos/%Y/%m/%d/')
     name = models.CharField(max_length=120)
     description = models.TextField(blank=True) #TinyMCE

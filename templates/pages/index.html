@@ -62,7 +62,7 @@
                         </div> 
                     {% endfor %}
                 {% else %}
-                    <p>Nothing to display in About section.</p>
+                    <p>Nothing to display in Our Work section.</p>
                 {% endif %}
             </div>
         </div>
@@ -73,89 +73,40 @@
     <section class="experts">
         <div class="container">
             <div class="experts-grid">
-                <div class="card-experts">
-                    <div>
-                        <img class="profile-img" src="img/Experts images/expert1.jpg" alt="">
-                        <ul class="social-list">
-                            <li class="social-item">
-                                <a aria-label="facebook" class="social-link" href="https://facebook.com" target="_blank">
-                                    <i class="fab fa-facebook-square"></i>
-                                </a>
-                            </li>
-                            <li class="social-item">
-                                <a aria-label="twitter" class="social-link" href="https://twitter.com" target="_blank">
-                                    <i class="fab fa-twitter-square"></i>
-                                </a>
-                            </li>
-                            <li class="social-item">
-                                <a aria-label="linkedin" class="social-link" href="https://linkedin.com" target="_blank">
-                                    <i class="fab fa-linkedin"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
+                {% if expert %}
+                    {% for expert in expert %}
 
-                    <div>
-                        <h2 class="profile-name">Ramsey Harper</h2>
-                        <p class="profile-position">Senior Project Coordinator</p>
-                    </div>
-                </div>
+                        <div class="card-experts">
+                            <div>
+                                <img class="profile-img" src="{{ expert.photo.url }}" alt="">
+                                <ul class="social-list">
+                                    <li class="social-item">
+                                        <a aria-label="facebook" class="social-link" href="https://facebook.com" target="_blank">
+                                            <i class="fab fa-facebook-square"></i>
+                                        </a>
+                                    </li>
+                                    <li class="social-item">
+                                        <a aria-label="twitter" class="social-link" href="https://twitter.com" target="_blank">
+                                            <i class="fab fa-twitter-square"></i>
+                                        </a>
+                                    </li>
+                                    <li class="social-item">
+                                        <a aria-label="linkedin" class="social-link" href="https://linkedin.com" target="_blank">
+                                            <i class="fab fa-linkedin"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
 
-                <div class="card-experts">
-                    <div>
-                        <img class="profile-img" src="img/Experts images/expert2.jpg" alt="">
-                        <ul class="social-list">
-                            <li class="social-item">
-                                <a aria-label="facebook" class="social-link" href="https://facebook.com" target="_blank">
-                                    <i class="fab fa-facebook-square"></i>
-                                </a>
-                            </li>
-                            <li class="social-item">
-                                <a aria-label="twitter" class="social-link" href="https://twitter.com" target="_blank">
-                                    <i class="fab fa-twitter-square"></i>
-                                </a>
-                            </li>
-                            <li class="social-item">
-                                <a aria-label="linkedin" class="social-link" href="https://linkedin.com" target="_blank">
-                                    <i class="fab fa-linkedin"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div>
-                        <h2 class="profile-name">John Doe</h2>
-                        <p class="profile-position">CEO</p>
-                    </div>
-                </div>
-
-                <div class="card-experts">
-                    <div>
-                        <img class="profile-img" src="img/Experts images/expert3.jpg" alt="">
-                        <ul class="social-list">
-                            <li class="social-item">
-                                <a aria-label="facebook" class="social-link" href="https://facebook.com" target="_blank" >
-                                    <i class="fab fa-facebook-square"></i>
-                                </a>
-                            </li>
-                            <li class="social-item">
-                                <a aria-label="twitter" class="social-link" href="https://twitter.com" target="_blank">
-                                    <i class="fab fa-twitter-square"></i>
-                                </a>
-                            </li>
-                            <li class="social-item">
-                                <a aria-label="linkedin" class="social-link" href="https://linkedin.com" target="_blank">
-                                    <i class="fab fa-linkedin"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div>
-                        <h2 class="profile-name">Sesilia Alhainen</h2>
-                        <p class="profile-position">Sales Director, Key Accounts</p>
-                    </div>
-                </div>
+                            <div>
+                                <h2 class="profile-name">{{ expert.name }}</h2>
+                                <p class="profile-position">{{ expert.description }}</p>
+                            </div>
+                        </div>
+                    {% endfor %}
+                {% else %}
+                    <p>Nothing to display in Experts section.</p>
+                {% endif %}
             </div>
         </div>
     </section>

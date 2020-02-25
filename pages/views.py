@@ -1,13 +1,13 @@
 from django.shortcuts import render
 
-from .models import About, Work, Experts
+from .models import About, Work, Expert
 
 # Create your views here.
 def index(request):
 
     works = Work.objects.all()
     abouts = About.objects.all()
-    expert = Experts.objects.all()
+    expert = Expert.objects.all()
 
     context = {
         'abouts': abouts,
@@ -18,9 +18,3 @@ def index(request):
     return render(request, 'pages/index.html', context)
 
 
-def vacancies(request):
-    return render(request, 'vacancies/vacancies.html')
-
-
-def vacancy(request):
-    return render(request, 'vacancies/vacancy.html')
