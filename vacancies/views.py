@@ -6,13 +6,13 @@ from .models import Listing, Dutie, Academic, Skill, Benefit
 # Create your views here.
 def vacancies(request):
     listings = Listing.objects.order_by('-vacancy_date').filter(is_published=True)
-    
+
     duties = Dutie.objects.all()
     academics = Academic.objects.all()
     skills = Skill.objects.all()
     benefits = Benefit.objects.all()
 
-    paginator = Paginator(listings, 6)
+    paginator = Paginator(listings, 3)
 
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
