@@ -24,9 +24,20 @@ def vacancies(request):
 
 def vacancy(request, pk):
     vacancy = get_object_or_404(Listing, id=pk)
+    
+    title_id = Listing.objects.get(id=pk)
+    duties = title_id.dutie_set.all()
+    academics = title_id.academic_set.all()
+    skills = title_id.skill_set.all()
+    benefits = title_id.benefit_set.all()   
+    
 
     context = {
         'vacancy': vacancy,
+        'duties': duties,
+        'academics': academics,
+        'skills': skills,
+        'benefits': benefits,
     }
 
     return render(request, 'vacancies/vacancy.html', context)
