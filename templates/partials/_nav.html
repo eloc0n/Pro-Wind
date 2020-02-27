@@ -56,8 +56,12 @@
             {% elif 'vacancies' in request.path%}
                 <h1>Empowering Projects</h1>
             {% else %}
-                <h1>{{ listing.name }}listing.name</h1>
-                <p>{{ listing.position }}listing.position</p>
+                <h1>{{ vacancy.title }}</h1>
+                {% if vacancy %}
+                        <p>{{ vacancy.position }}</p>
+                    {% else %}
+                        <h1>No name available</h1>
+                {% endif %}
             {% endif %}
         </div>
         {% if 'vacancies' in request.path %}

@@ -29,7 +29,11 @@ ul {
     margin: auto;
 }
 
+/* Pagination */
 
+.pagination {
+  text-align: center;
+}
 
 /* Nav */
 
