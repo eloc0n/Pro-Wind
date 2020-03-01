@@ -792,6 +792,17 @@ img {
   font-family: "Open Sans";
 }
 
+.form-group span {
+  color: #fff;
+  background: #005d9b59;
+  padding: 5px;
+  border: 1px solid #005d9b59;
+  border-radius: 5px;
+  font-weight: 800;
+  margin-bottom: 50px;
+}
+
+
 label {
   font-weight: bold;
   margin-bottom: 0.375em;
@@ -815,6 +826,39 @@ input, textarea {
   background: #005d9b59;
   color: #fff;
   transition: background-color 0.5s;
+}
+
+
+/* Dashboard */
+
+table {
+  margin-top: 50px;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+td {
+  font-size: 16px;
+}
+
+.table tbody td a {
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 5px;
+  background: #005d9b59;
+  color: #fff;
+  transition: background-color 0.5s;
+}
+
+.table tbody td a:hover {
+  background:#005e9b;
+  transition: 0.3s;
 }
 
 /* MEDIA QUERRIES */
@@ -1146,6 +1190,10 @@ input, textarea {
   input, textarea {
     width: 250px; 
   }
+
+  td {
+    font-size: 12px;
+  }
 }
 
 
@@ -1153,7 +1201,6 @@ input, textarea {
   .main-nav {
     font-size: 12px;
   }
-
 
   .card-work {
     width: 330px;
@@ -1177,5 +1224,9 @@ input, textarea {
   .card-work-content p {
     margin-bottom: 2px;
     font-size: 12px;
+  }
+
+  td {
+    font-size: 10px;
   }
 }

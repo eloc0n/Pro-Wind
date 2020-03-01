@@ -19,10 +19,10 @@
         <nav class="main-nav">
             <a href="{% url 'index' %}">
                 <img 
-                    {% if 'form' == request.path %}
-                        src="{% static 'img/logo-dark.png' %}"
-                    {% else %}
+                    {% if '/' == request.path %}
                         src="{% static 'img/logo.png' %}"
+                    {% else %}
+                        src="{% static 'img/logo-dark.png' %}"
                     {% endif %}
                     alt="ProWind" class="logo"
                 >
