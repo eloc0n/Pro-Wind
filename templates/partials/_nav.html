@@ -4,7 +4,9 @@
 <header 
     {% if '/' == request.path %}
         id="home-showcase"
-    {% elif 'vacancies' or 'vacancy' in request.path %}
+    {% elif 'vacancies' in request.path %}
+        id="listing-showcase"
+    {% elif 'vacancy' in request.path %}
         id="listing-showcase"
     {% endif %}
     >
@@ -37,11 +39,11 @@
             </ul>
             <ul class="right-menu">
                 <li>
-                    <a href="#">Register</a>
+                    <a href="{% url 'register' %}">Register</a>
                     <i class="fas fa-user-plus"></i>
                 </li>
                 <li>
-                    <a href="#">Login</a>
+                    <a href="{% url 'login' %}">Login</a>
                     <i class="fas fa-sign-in-alt"></i>
                 </li>
             </ul>
@@ -55,7 +57,7 @@
                 </p>
             {% elif 'vacancies' in request.path%}
                 <h1>Empowering Projects</h1>
-            {% else %}
+            {% elif 'vacancy' in request.path %}
                 <h1>{{ vacancy.title }}</h1>
                 {% if vacancy %}
                         <p>{{ vacancy.position }}</p>

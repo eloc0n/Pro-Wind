@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!--Form-->
+
+ <section class="listings">
+    <div class="container">
+        <form>
+            
+            <div class="form-group login">
+
+                <span>Login <i class="fas fa-sign-in-alt"></i></span>
+                
+                <label for="username" >Username:</label>
+                <input type="text" name="username" class="form-control" required>
+              
+                <label for="password" >Password:</label>
+                <input type="password" name="password" class="form-control" required>
+              
+                <input type="submit" value="Login" class="btn-form">
+            </div>
+        </form>
+        
+    </div>
+</section>
+
+{% endblock %}
