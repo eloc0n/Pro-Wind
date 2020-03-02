@@ -9,42 +9,33 @@
 <section class="listings">
     <div class="container">
         
-        <h2>Welcome John</h2>
-        <p>Here are the vacancies that you have applied for</p>
-           <table class="table">
-               <thead>
-                   <tr>
-                       <th scope="col">#</th>
-                       <th scope="col">Vacancy</th>
-                       <th scope="col">Go to</th>
-                   </tr>
-               </thead>
-               <tbody>
-                   <tr>
-                       <td>22</td>
-                       <td>Electrical Engineering</td>
-                       <td>
-                           <a class="" href="#">View vacancy</a>
-                       </td>
-                   </tr>
-                   <tr>
-                       <td>22</td>
-                       <td>Electrical Engineering</td>
-                       <td>
-                           <a class="" href="#">View vacancy</a>
-                       </td>
-                   </tr>
-                   <tr>
-                       <td>22</td>
-                       <td>Electrical Engineering</td>
-                       <td>
-                           <a class="" href="#">View vacancy</a>
-                       </td>
-                   </tr>
-               </tbody>
-               
-           </table>
-        
+        <h2>Welcome {{ user.first_name }}</h2>
+        {% if contacts %}
+            <p>Here are the vacancies that you have applied for</p>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Vacancy</th>
+                        <th scope="col">Go to</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for contact in contacts %}
+                        <tr>
+                            <td>{{ contact.id }}</td>
+                            <td>{{ contact.vacancy }}</td>
+                            <td>
+                                <a href="{% url 'vacancy' contact.vacancy_id %}">View vacancy</a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+                
+            </table>
+        {% else %}
+            <p>You have no active applications</p>
+        {% endif %}
     </div>
 </section>
 
