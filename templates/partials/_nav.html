@@ -38,14 +38,30 @@
                 </li>
             </ul>
             <ul class="right-menu">
-                <li>
-                    <a href="{% url 'register' %}">Register</a>
-                    <i class="fas fa-user-plus"></i>
-                </li>
-                <li>
-                    <a href="{% url 'login' %}">Login</a>
-                    <i class="fas fa-sign-in-alt"></i>
-                </li>
+                {% if user.is_authenticated %}
+                    <li>
+                        <a href="{% url 'dashboard' %}"><strong>{{user.username}}</strong></a>
+                        <i class="fas fa-user"></i>
+                    </li>
+                    <li>
+                        <a href="javascript:{document.getElementById('logout').submit()}">Logout</a>
+                        <i class="fas fa-sign-out-alt"></i>
+                        
+                        <form action="{% url 'logout' %}" method="POST" id="logout">
+                            {% csrf_token %}
+                            <input type="hidden">
+                        </form>
+                    </li>
+                {% else %}
+                    <li>
+                        <a href="{% url 'register' %}">Register</a>
+                        <i class="fas fa-user-plus"></i>
+                    </li>
+                    <li>
+                        <a href="{% url 'login' %}">Login</a>
+                        <i class="fas fa-sign-in-alt"></i>
+                    </li>
+                {% endif %}
             </ul>
         </nav>
         <div class="header-text">

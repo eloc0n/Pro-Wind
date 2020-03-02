@@ -6,9 +6,11 @@
 
  <section class="listings">
     <div class="container">
-        <form>
-            
-            <div class="form-group login">
+        <form action="{% url 'register' %}" method="POST">
+            {% csrf_token %} 
+            <div class="form-group">
+                <!--Alerts-->
+                {% include 'partials/alerts.html' %}
 
                 <span>Register <i class="fas fa-user-plus"></i></span>
                 
@@ -28,7 +30,7 @@
                 <input type="password" name="password" class="form-control" required>
 
                 <label for="password2" >Confirm Password:</label>
-                <input type="password2" name="password2" class="form-control" required>
+                <input type="password" name="password2" class="form-control" required>
               
                 <input type="submit" value="Register" class="btn-form">
             </div>

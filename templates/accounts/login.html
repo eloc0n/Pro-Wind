@@ -6,10 +6,12 @@
 
  <section class="listings">
     <div class="container">
-        <form>
-            
-            <div class="form-group login">
-
+        <form action="{% url 'login' %}" method="POST">
+            {% csrf_token %} 
+            <div class="form-group">
+                <!--Alerts-->
+                {% include 'partials/alerts.html' %}
+                
                 <span>Login <i class="fas fa-sign-in-alt"></i></span>
                 
                 <label for="username" >Username:</label>

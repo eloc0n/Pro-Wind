@@ -31,3 +31,9 @@ function scrollFunction() {
     mybutton.style.display = "none";
   }
 }
+
+
+// Fade out Alerts
+setTimeout(function() {
+  $('#message').fadeOut('slow');
+}, 3000);

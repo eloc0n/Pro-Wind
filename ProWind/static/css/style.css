@@ -861,6 +861,21 @@ td {
   transition: 0.3s;
 }
 
+/* Alerts */
+
+#message {
+  height: 45px;
+  width: 100%;
+  color: #fff;
+  font-weight: 600;
+  padding: 5px;
+  text-align: center;
+  border: 22px #ccc;
+  border-radius: 5px;
+  background: #5e5e5e;
+  margin-bottom: 30px;
+}
+
 /* MEDIA QUERRIES */
 
 @media(max-width: 1500px) {
