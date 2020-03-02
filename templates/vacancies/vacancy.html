@@ -2,6 +2,8 @@
 
 {% load static %}
 
+{% block title %} | {{ vacancy.title }}{% endblock %}
+
 {% block content %}
 
     <!--Job Listings-->
@@ -53,7 +55,7 @@
                         <li>No description available.</li>
                     {% endif %}
                 </ul>
-                <a class="btn-listing-form" href="form.html">Fill in form</a>
+                <a class="btn-listing-form" href="{% url 'contact' vacancy.id %}">Fill in form</a>
             </div>
         </div>
     </section>

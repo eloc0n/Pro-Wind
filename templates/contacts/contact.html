@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block title %} | Contact{% endblock %}
+
+
+{% block content %}
+<!--Form-->
+
+<section class="listings">
+    <div class="container">
+        <form action="{% url 'contact' vacancy.id %}" method="POST">
+            {% csrf_token %} 
+            {% if user.is_authenticated %}
+                <input type="hidden" name="user_id" value="{{ user.id }}">
+            {% else %}
+                <input type="hidden" name="user_id" value="0">
+            {% endif %}
+            <input type="hidden" name="vacancy_id" value="{{ vacancy.id }}">
+            <div class="form-group">
+                <!--Alerts-->
+                {% include 'partials/alerts.html' %}
+
+                <label for="position_name" >Position:</label>
+                <input type="text" name="vacancy" class="form-control" 
+                value="{{ vacancy.title }}-{{ vacancy.country }}, {{ vacancy.city }}">
+              
+                <label for="name" >Name:</label>
+                <input type="text" name="name" class="form-control" {% if user.is_authenticated %} value="{{ user.first_name }} {{ user.last_name }}" {% endif %} required>
+              
+                <label for="email" >Email:</label>
+                <input type="email" name="email" class="form-control" {% if user.is_authenticated %} value="{{ user.email }}" {% endif %} required>
+              
+                <label for="phone" >Phone:</label>
+                <input type="text" name="phone" class="form-control" {% if user.is_authenticated %} value="{{ user.phone }}" {% endif %} required>
+                <!--
+                <label for="resume">CV / Resume:</label>
+                <input type="file"  accept=".docx,.doc,.ppt,.pptx,.pdf,.pages,.txt,.rtf,.odt,.odp" required>  
+                    -->
+                <label for="cover_letter" >Cover letter (Optional):</label>
+                <textarea name="cover_letter" class="form-control"></textarea>
+              
+                <input type="submit" value="Send" class="btn-form">
+            </div>
+        </form>
+        
+    </div>
+</section>
+
+{% endblock %}
