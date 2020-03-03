@@ -6,6 +6,7 @@ from .models import Contact
 
 # Create your views here.
 def contact(request, pk):
+
     if request.method == 'POST':
         vacancy_id = request.POST['vacancy_id']
         vacancy = request.POST['vacancy']
@@ -14,6 +15,8 @@ def contact(request, pk):
         phone = request.POST['phone']
         cover_letter = request.POST['cover_letter']
         user_id = request.POST['user_id']
+        doc_file = request.FILES['document']
+        
 
         # Check if user has applied already
         if request.user.is_authenticated:
@@ -29,13 +32,14 @@ def contact(request, pk):
                             email=email, 
                             phone=phone, 
                             cover_letter=cover_letter, 
-                            user_id=user_id)
+                            user_id=user_id,
+                            doc_file=doc_file)
 
         contact.save()
 
         # Send email
         send_mail(
-            'Vacancy applicant',
+            'New vacancy application received',
             'There has been an application for ' + vacancy + '. Sign into the admin panel for more info.',
             'jani.bratja@gmail.com',
             ['johnisb.21@gmail.com'],
@@ -43,9 +47,9 @@ def contact(request, pk):
         )
 
         messages.success(request, 'Your request has been submitted!')
-        
-    vacancy = get_object_or_404(Listing, id=pk)
 
+    vacancy = get_object_or_404(Listing, id=pk)
+    
     context = {
         'vacancy': vacancy,
     }

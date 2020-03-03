@@ -11,6 +11,7 @@ class Contact(models.Model):
     cover_letter = models.TextField(blank=True)
     contact_date = models.DateTimeField(default=datetime.now, blank=True)
     user_id = models.IntegerField(blank=True)
+    doc_file = models.FileField(upload_to='documents/%Y/%m/%d/', null=True)
 
     def __str__(self):
         return self.name

@@ -8,7 +8,7 @@
 
 <section class="listings">
     <div class="container">
-        <form action="{% url 'contact' vacancy.id %}" method="POST">
+        <form action="{% url 'contact' vacancy.id %}" method="POST" enctype="multipart/form-data">
             {% csrf_token %} 
             {% if user.is_authenticated %}
                 <input type="hidden" name="user_id" value="{{ user.id }}">
@@ -32,10 +32,10 @@
               
                 <label for="phone" >Phone:</label>
                 <input type="text" name="phone" class="form-control" {% if user.is_authenticated %} value="{{ user.phone }}" {% endif %} required>
-                <!--
+                
                 <label for="resume">CV / Resume:</label>
-                <input type="file"  accept=".docx,.doc,.ppt,.pptx,.pdf,.pages,.txt,.rtf,.odt,.odp" required>  
-                    -->
+                <input type="file" name="document" required>  
+                   
                 <label for="cover_letter" >Cover letter (Optional):</label>
                 <textarea name="cover_letter" class="form-control"></textarea>
               
