@@ -178,3 +178,9 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'jani.bratja@gmail.com'
 EMAIL_HOST_PASSWORD = 'gxvkuxrsxlgtzzje'
+
+
+try:
+    from .local_settings import *
+except ImportError:
+    pass
