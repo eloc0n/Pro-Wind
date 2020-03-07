@@ -1,7 +1,7 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html {
@@ -9,24 +9,25 @@ html {
 }
 
 body {
-    font-family: 'Lato', 'Arial', sans-serif;
-    font-size: 22px; 
-    background: #fff;
+  font-family: 'Lato', 'Arial', sans-serif;
+  font-size: 22px; 
+  background: #fff;
+  text-rendering: optimizeLegibility;
 }
 
 a {
-    color: #262626;
-    text-decoration: none;
+  color: #262626;
+  text-decoration: none;
 }
 
 ul {
-    list-style: none;
+  list-style: none;
 }
 
 .container {
-    width: 90%;
-    max-width: 1300px;
-    margin: auto;
+  width: 90%;
+  max-width: 1300px;
+  margin: auto;
 }
 
 /* Pagination */
