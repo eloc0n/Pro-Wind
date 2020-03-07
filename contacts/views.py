@@ -38,13 +38,13 @@ def contact(request, pk):
         contact.save()
 
         # Send email
-        # send_mail(
-        #     'New vacancy application received',
-        #     'There has been an application for ' + vacancy + '. Sign into the admin panel for more info.',
-        #     'jani.bratja@gmail.com',
-        #     ['johnisb.21@gmail.com'],
-        #     fail_silently=False
-        # )
+        send_mail(
+            'New vacancy application received',
+            'There has been an application for ' + vacancy + '. Sign into the admin panel for more info.',
+            'jani.bratja@gmail.com',
+            ['johnisb.21@gmail.com'],
+            fail_silently=False
+        )
 
         messages.success(request, 'Your request has been submitted!')
 
