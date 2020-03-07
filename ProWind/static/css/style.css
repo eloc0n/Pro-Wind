@@ -819,6 +819,7 @@ img {
   width: 80%;
   margin: auto;
   font-family: "Open Sans";
+  text-rendering: optimizeLegibility;
 }
 
 .job-description p{
