@@ -35,7 +35,15 @@ def contact(request, pk):
                             user_id=user_id,
                             doc_file=doc_file)
 
-        contact.save()
+        filesize= doc_file.size
+    
+        if filesize > 10485760:
+            messages.error(request, "The maximum file size is 10MB")
+        else:
+            contact.save()
+            messages.success(request, 'Your request has been submitted!')
+
+        
 
         # Send email
         send_mail(
@@ -45,8 +53,6 @@ def contact(request, pk):
             ['johnisb.21@gmail.com'],
             fail_silently=False
         )
-
-        messages.success(request, 'Your request has been submitted!')
 
     vacancy = get_object_or_404(Listing, id=pk)
     
