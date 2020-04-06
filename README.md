@@ -5,6 +5,7 @@ Concept: "Pro Wind is an engineering firm specializing in energy solution with m
 
 # Run
 
-<div><pre><span><span>#</span> Install pipenv</span>pip install pipenv</pre></div>
+<div><pre><span><span>#</span> Install pipenv</span>
+pip install pipenv</pre></div>
 <div><pre><span><span>#</span> Create venv</span>pipenv shell</pre></div>
 <div><pre><span><span>#</span> Install requirements</span>$ pip install -r requirements.txt</pre></div>
