@@ -5,6 +5,8 @@ Concept: "Pro Wind is an engineering firm specializing in energy solution with m
 
 # Run
 
+To run the project you have to first clone and then:
+
 <div><pre><span><span>#</span> Install pipenv</span>
 pip install pipenv</pre></div>
 
